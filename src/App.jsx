@@ -19,15 +19,16 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="/team" element={<Team />} />{" "}
-        <Route path="/settings" element={<Settings />} />
-        
+        <Route path="team" element={<Team />} />
+        <Route path="settings" element={<Settings />} />
+
         <Route path="projects" element={<ProjectsLayout />}>
           <Route index element={<Projects />} />
           <Route path="add" element={<AddProject />} />
           <Route path=":id" element={<ProjectDetails />} />
           <Route path=":id/edit" element={<EditProject />} />
         </Route>
+
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
     </Routes>

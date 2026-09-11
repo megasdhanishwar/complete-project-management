@@ -35,12 +35,12 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <span>Projects</span>
           </NavLink>
 
-          <NavLink to="/team">
+          <NavLink to="/team" onClick={() => setSidebarOpen(false)}>
             <FiUsers />
             <span>Team</span>
           </NavLink>
 
-          <NavLink to="/settings">
+          <NavLink to="/settings" onClick={() => setSidebarOpen(false)}>
             <FiSettings />
             <span>Settings</span>
           </NavLink>
